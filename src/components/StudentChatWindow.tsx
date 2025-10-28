@@ -142,10 +142,30 @@ const StudentChatWindow: React.FC<StudentChatWindowProps> = ({ mode }) => {
         };
 
         setMessages((prev) => [...prev, assistantMessage]);
+      } else if (mode === 'mcq') {
+        // MCQ mode - Phase 3 is now complete!
+        const assistantMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: `I can help you practice MCQs!
+
+To get started:
+1. First, make sure you have documents uploaded by your trainer
+2. Then visit the MCQ practice page for a specific document: /student/mcq/[documentId]
+
+For example, if you want to practice MCQs for document ID 1:
+Visit: /student/mcq/1?studentId=${studentId}
+
+The system will automatically generate MCQs from the document if none exist yet. You can then practice answering them and get instant feedback with explanations!
+
+Would you like me to help you find available documents?`,
+          timestamp: new Date(),
+        };
+
+        setMessages((prev) => [...prev, assistantMessage]);
       } else {
-        // For other modes, use placeholder responses (Phase 3+)
+        // For other modes, use placeholder responses (Phase 4+)
         const responses: Record<string, string> = {
-          mcq: "I'll generate MCQs for you! However, the MCQ generation API is not yet implemented. This will be available in Phase 3 when we integrate the MCQ generation agent.",
           mindmap:
             "I'll create a mind map for you! However, the mind map generation API is not yet implemented. This will be available in Phase 4 when we integrate the mind map generation agent.",
           websearch:
