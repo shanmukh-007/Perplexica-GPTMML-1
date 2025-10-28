@@ -1,0 +1,20 @@
+Phase 2 - PDF RAG Implementation
+
+Phase 2 of the Exam Prep Platform focuses on implementing the complete PDF RAG (Retrieval-Augmented Generation) workflow.
+
+Key Tasks:
+1. Document Upload - Trainers can upload PDF, DOCX, and TXT files
+2. Text Extraction - Automatic text extraction using LangChain loaders
+3. Document Chunking - Split text into 500-character chunks with 100-character overlap
+4. Embedding Generation - Generate vector embeddings using Google Gemini
+5. Vector Search - Implement cosine similarity search for relevant chunks
+6. RAG-based Q&A - Students can ask questions and get AI-powered answers
+7. Source Citations - Display source documents with answers
+
+Technical Implementation:
+- Uses Google Gemini for embeddings (text-embedding-004 model)
+- Uses Google Gemini for chat responses (gemini-2.0-flash-exp model)
+- Stores embeddings in PostgreSQL as JSONB arrays
+- Implements access control based on document visibility settings
+
+The system allows trainers to upload study materials and students to ask questions about those materials, with AI providing contextual answers based on the uploaded documents.

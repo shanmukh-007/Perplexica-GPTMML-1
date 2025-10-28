@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "setupComplete": true,
+  "general": {},
+  "modelProviders": [
+    {
+      "id": "0f18a96c-df0a-4ff6-9ab6-a1527b0a5f5a",
+      "name": "Transformers",
+      "type": "transformers",
+      "chatModels": [],
+      "embeddingModels": [],
+      "config": {},
+      "hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "id": "7f41ff37-efa2-450f-bf16-a6b089d3db95",
+      "name": "Google Gemini",
+      "type": "gemini",
+      "chatModels": [],
+      "embeddingModels": [],
+      "config": {
+        "apiKey": "AIzaSyAOXeTiiCiOHU6bfeb66c3rgGJEb4jiJbw"
+      },
+      "hash": "a0fd31dc174750f5616f7d5b55c627855d3f290a41c115a2e930352429bf916e"
+    },
+    {
+      "id": "257277b6-93a3-43e6-b648-259b70916092",
+      "name": "Google Gemini",
+      "type": "gemini",
+      "chatModels": [],
+      "embeddingModels": [],
+      "config": {
+        "apiKey": "AIzaSyAOXeTiiCiOHU6bfeb66c3rgGJEb4jiJbw"
+      },
+      "hash": "bc0fb8a8c3787df0d769078d7c82f023b916fef3b17ec44426b3fef5b035784b"
+    }
+  ],
+  "search": {
+    "searxngURL": "http://localhost:4000"
+  }
+}
