@@ -60,7 +60,7 @@ async function verifyDatabase() {
       if (tableNames.includes(tableName)) {
         try {
           const countQuery = `SELECT COUNT(*) as count FROM "${tableName}"`;
-          const count = await (sql as any)(countQuery);
+          const count = await sql(countQuery);
           console.log(`  ${tableName}: ${count[0].count} rows`);
         } catch (err) {
           console.log(`  ${tableName}: Error counting rows`);
